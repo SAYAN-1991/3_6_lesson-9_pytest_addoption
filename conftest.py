@@ -1,4 +1,3 @@
-import time
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -23,4 +22,3 @@ def browser(request):
     browser.quit()
 
 #pytest --language=es test_items.py
-
