@@ -10,7 +10,7 @@ def pytest_addoption(parser):
 @pytest.fixture(scope="function")
 def browser(request):
     user_language = request.config.getoption("language")
-    if user_language in ("ru", "en", "es"):
+    if user_language in ("en-gb", "ru", "fr", "de", "es", "it", "sk", "pt"):
         print("\nstart chrome browser for test language = " + user_language)
         options = Options()
         options.add_experimental_option('prefs', {'intl.accept_languages': user_language})
