@@ -16,7 +16,7 @@ def browser(request):
         options.add_experimental_option('prefs', {'intl.accept_languages': user_language})
         browser = webdriver.Chrome(options=options)
     else:
-        raise pytest.UsageError("--language should be en, ru, es")
+        raise pytest.UsageError("--language should be en-gb, ru, fr, de, es, it, sk, pt")
     yield browser
     print("\nquit browser..")
     browser.quit()
